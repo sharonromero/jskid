@@ -1,15 +1,18 @@
 body {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
 p {
     font-size: 2.5em;
 }
+
 .eye {
     background-color: #163D5E;
     width:30%;
     height:30%;
     border-radius: 50%;
 }
+
 .arm {
     background-color: #0DB3A6;
     position: absolute;
@@ -27,16 +30,19 @@ p {
     left: 33%;
     top: 5%;
 }
+
 #righteye {
     position: absolute;
     left: 10%;
     top: 20%;
 }
+
 #lefteye {
     position: absolute;
     left: 60%;
     top: 20%;
 }
+
 #nose {
     position: absolute;
     left: 45%;
@@ -45,6 +51,7 @@ p {
     height: 10%;
     background-color: black;
 }
+
 #mouth {
     position: absolute;
     width: 65%;
@@ -53,6 +60,7 @@ p {
     top: 70%;
     background-color: #3AED5C;
 }
+
 #body {
     position: absolute;
     left: 25%;
@@ -70,6 +78,7 @@ p {
     width: 30%;
     height: 25%;
 }
+
 #leftarm {
     position: absolute;
     left: 70%;

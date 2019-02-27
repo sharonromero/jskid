@@ -8,6 +8,8 @@ leftEye.addEventListener("click", moveUpDown);
 leftArm.addEventListener("click", moveRightLeft);
 mouth.addEventListener("click", moveUpBack);
 
+// The parameter (e) is automatically passed from javascript to your function when you add an event listener. 
+// It represents the element that was affected, in this case the right and left eyes that are clicked, or the left arm and mouth in the other code below.
 function moveUpDown(e) {
 	var robotPart = e.target;
   var top = 0;
@@ -16,8 +18,8 @@ function frame() {
 	robotPart.style.top = top + '%';
 	  top++;
 	  if (top === 20){
-      //The clearInterval() function clears the interval that was set by the setInterval() function above.
-      //The setInterval() function takes two parameters: The number id value is stored in a variable and it's passed into the clearInterval() function to clear the interval.
+      // The clearInterval() function clears the interval that was set by the setInterval() function above.
+      // The setInterval() function takes two parameters: The number id value is stored in a variable and it's passed into the clearInterval() function to clear the interval.
     	clearInterval(id);
   	}
   }
