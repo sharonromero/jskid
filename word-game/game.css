@@ -1,5 +1,6 @@
 body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #F0FFFF;
 }
 
 /* float: left causes the div to be placed along the left edge of its container (which is the document's body element). Other elements will flow around it. */
@@ -27,7 +28,8 @@ li {
 
 input[type=text] {
 	border-width: 0 0 1px 0;
-	border-color: #333;
+	border-color: #FF1493;
+	background-color: #F0FFFF
 }
 
 #buttonDiv {
@@ -42,7 +44,7 @@ input[type=text] {
 #story {
 	margin-top: 12px;
 	width: 45%;
-	border: 1px dashed blue;
+	border: 1px dashed orchid;
 	padding: 8px;
 	float: left;
 }
