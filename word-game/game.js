@@ -12,16 +12,21 @@ function replaceIt () {
 
 /* Creates a variable to hold the value of the first HTML input field. */
 	var adj1 = "<span class='replacement'>"+ document.getElementById("adj1").value + "</span>";
-
-/* INSERT MORE VARIABLE DEFINITIONS HERE */
+	var verbIng = "<span class='replacement'>"+ document.getElementById("verbIng").value + "</span>";
+	var room1 = "<span class='replacement'>"+ document.getElementById("room1").value + "</span>";
+	var color = "<span class='replacement'>"+ document.getElementById("color").value + "</span>";
+	var plNoun = "<span class='replacement'>"+ document.getElementById("plNoun").value + "</span>";
+	var verbPast = "<span class='replacement'>"+ document.getElementById("verbPast").value + "</span>";
+	var beverage = "<span class='replacement'>"+ document.getElementById("beverage").value + "</span>";
 
 /* Creates a variable that will be used to put the story together. */
-/* Puts the title of the story into theStory and puts the title inot the h1 element. */
-	var theStory = "<h1>Douglas's Dance Party</h1>";
+/* Puts the title of the story into theStory and puts the title into the h1 element. */
+	var theStory = "<h1>Jack's Dance Party</h1>";
 
 /* Adds the first part of the story to theStory by using the combination concatenation/assignment operator, +=. */
 /* This operator adds the new value to any value that's already stored in the variable. */
 	theStory += "One " + adj1 + " day,";
+	theStory += " Jack was " + verbIng;
 
 /* PUT THE REST OF THE STORY HERE, USING THE += OPERATOR */
 
