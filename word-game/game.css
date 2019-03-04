@@ -1,0 +1,53 @@
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* float: left causes the div to be placed along the left edge of its container (which is the document's body element). Other elements will flow around it. */
+/* float: left will cause the div containing the input questions to be placed to the side of the div that will contain the finished story, rather than above it. */
+#inputWords {
+	float: left;
+	width: 45%;
+}
+
+/* The list-style-type property removes the bullet from the left of each item in the list. */
+/* Setting the padding and margin to 0px makes the list left aligned with the other text on the page. */
+ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Setting the line-height of the li creates more space between list items. */
+/* The margin-top property creates more space between the list items. */
+li {
+	line-height: 2em;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+input[type=text] {
+	border-width: 0 0 1px 0;
+	border-color: #333;
+}
+
+#buttonDiv {
+	text-align: center;
+}
+
+#replaceButton {
+	margin-top: 30px;
+	width: 200px;
+}
+
+#story {
+	margin-top: 12px;
+	width: 45%;
+	border: 1px dashed blue;
+	padding: 8px;
+	float: left;
+}
+
+.replacement {
+	text-decoration: underline;
+	text-transform: uppercase;
+}
