@@ -22,14 +22,16 @@ ul {
 /* The margin-top property creates more space between the list items. */
 li {
 	line-height: 2em;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	margin-top: 8px;
 }
 
 input[type=text] {
 	border-width: 0 0 3px 0;
 	border-color: #FF1493;
-	background-color: #F0FFFF
+	background-color: #F0FFFF;
+	font-size: 20px;
+	color: blue;
 }
 
 #buttonDiv {
@@ -45,7 +47,7 @@ input[type=text] {
 #story {
 	margin-top: 12px;
 	width: 45%;
-	border: 1px dashed orchid;
+	border: 1px dashed blue;
 	padding: 8px;
 	float: left;
 }
