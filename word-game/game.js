@@ -54,3 +54,11 @@ function replaceIt() {
 /* Using innerHTML to display the value of theStory inside the div we created for the story. */
 	storyDiv.innerHTML = theStory;
 }
+
+var scrollButton = document.getElementById("scrollButton");
+
+scrollButton.addEventListener("click",scrollWin);
+
+function scrollWin() {
+  window.scrollBy(0, -600);
+}
