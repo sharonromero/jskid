@@ -3,14 +3,14 @@ body {
 }
 #container {
     padding: 10px;
-    width: 360px;
+    width: 500px;
     height: 80%;
-    background-color: #00FF00;
+    background-color: #00BFFF;
 }
 #track {
-    width: 340px;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    width: 500px;
+    border-top: 2px solid #8B008B;
+    border-bottom: 2px solid #8B008B;
     margin: 20px auto;
 }
 #train {
@@ -22,10 +22,11 @@ body {
 #stopButton {
     padding-top: 15px;
     margin: 10px auto;
-    background-color: white;
+    background-color: #00BFFF;
+    border: 1px dashed white;
     width: 100px;
     height: 50px;
-    color: red;
+    color: #FFFFE0;
     text-align:center;
     font-size: 24px;
     line-height: 30px;
