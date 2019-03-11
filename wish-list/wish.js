@@ -75,4 +75,9 @@ function printView() {
 	for (var i = 0; i < myList.length; i++) {
 		wishList.innerHTML += "<li>" + myList[i] + "</li>"; // Adds a list item to the wishList and displays it in the browser window.
 	} // This curly brace closes the loop.
+
+	// The following command causes the program to automatically open the browser's Print dialog box when the Print Your List button is clicked.
+	// print() is a built-in JS method, which belongs to the window object.
+	// The window object represents the current browser window within JS.
+	window.print();
 }
