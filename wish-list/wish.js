@@ -1,10 +1,14 @@
-//create an event listener for the print button, with a handler function called printView
+// An event listener for the print button, with a handler function called printView
 
-// var printButton = 
+var printButton = document.getElementById("printable");
 
-//create an event listener for the add button, with a handler function called addTheThing
+printButton.addEventListener("click",printView);
 
-// var addButton = 
+// An event listener for the add button, with a handler function called addTheThing
+
+var addButton = document.getElementById("addIt");
+
+addButton.addEventListener("click",addTheThing);
 
 // create a blank array named myList
 
