@@ -52,14 +52,27 @@ function addToTheList(thingToAdd) {
     myListArea.appendChild(newListItem);
 }
 
-// function resetInput, which resets the value of the
-// input field to blank ("")
-// function resetInput(inputToReset) {
-
-// }
+// The resetInput function resets the value of the input field to blank ("") so you can enter your next list item.
+// The resetInput function is called by the addTheThing function after each item is added to the list.
+function resetInput(inputToReset) {
+	inputToReset.value = ""; // This statement changes the value property of the element referenced by the inputToReset variable (the input field) to an empty string, which results in the text in the input field to empty out.
+}
 
 // function printView, which outputs a nicely formatted 
 // view of the list 
 function printView() {
-  
+	var listPage = document.getElementById("listPage"); // This variable holds a reference to the entire page.
+	var formArea = document.getElementById("formArea"); // This variable holds a reference to the form area of the page.
+
+	formArea.style.display = "none"; // This statement hides the form by changing the value of the CSS display property to "none".
+	listPage.className = "print"; // Adds a new class attribute to the listPage element with a value of "print".
+	// listPage.className = "print"; stated above, modifies the first div element in the document from this: <div id="listPage"> to this: <div id="listPage" class="print">.   
+	myListArea.innerHTML = ""; // Clears all the items from the list.
+	myList.sort(); // Sorts the array using the sort() array method. Sorts the items on the list alphabetically.
+
+	// The next statement uses a loop to print out each value in the array.
+	// This statement runs the statements between its curly braces one time for every item in the array.
+	for (var i = 0; i < myList.length; i++) {
+		wishList.innerHTML += "<li>" + myList[i] + "</li>"; // Adds a list item to the wishList and displays it in the browser window.
+	} // This curly brace closes the loop.
 }
