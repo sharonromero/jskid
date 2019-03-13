@@ -1,12 +1,25 @@
 body {
     font-family: Arial, sans-serif;
+	background-image: url("https://data.whicdn.com/images/313995425/large.jpg");
 }
+
 h1 {
     text-align: center;
+    color: yellow;
+    background-color: 	#DC143C;
+    border: 4px solid #DB7093;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px #888888;
 }
+
 #orderForm {
-    background-color: #eeeeee;
-    border: 4px solid yellow;
+    background-color: 	#FFFACD;
+    border: 4px solid #DB7093;
     border-radius: 4px;
     padding: 8px;
     margin: 8px;
