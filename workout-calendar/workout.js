@@ -34,32 +34,32 @@ function displayActivity() {
 
     	case 1:
     	// Sets the value of youShould when it's Monday.
-    		youShould = "Do Cardio";
+    		youShould = "Cardio";
     		break;
 
     	case 2:
     	// Sets the value of youShould when it's Tuesday.
-    		youShould = "Do Strength Training";
+    		youShould = "Strength Training";
     		break;
 
     	case 3:
     	// Sets the value of youShould when it's Wednesday.
-    		youShould = "Do Kickboxing";
+    		youShould = "Kickboxing";
     		break;
 
     	case 4:
     	// Sets the value of youShould when it's Thursday.
-    		youShould = "Do Yoga";
+    		youShould = "Yoga";
     		break;
 
     	case 5:
     	// Sets the value of youShould when it's Friday.
-    		youShould = "Do the Treadmill";
+    		youShould = "Treadmill";
     		break;
 
     	case 6:
     	// Sets the value of youShould when it's Saturday.
-    		youShould = "Do Fitness Walk Outside";
+    		youShould = "Fitness Walk Outside";
     		break;
 
     	default:

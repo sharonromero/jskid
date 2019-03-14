@@ -1,10 +1,27 @@
 body {
-    font-family:"Comic Sans MS";
+	background-color: lightblue;
 }
+
+h1 {
+    font-family: 'Domine', serif;
+    color: darkblue;
+}
+
+p {
+	font-weight: bold;
+}
+
+button {
+	background-color: lightblue;
+	/*border: 1px solid black;*/
+}
+
 #buttonBox {
     margin-top: 30px;
 }
 #thingToDo {
     margin-top: 20px;
-    background-color: #dadada;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    background-color: lightblue;
 }
