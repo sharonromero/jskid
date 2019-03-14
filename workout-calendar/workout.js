@@ -1,13 +1,13 @@
 var todayDate = document.getElementById("todaysdate");
 var todoButton = document.getElementById("whattodo");
 
-// add a listener to the whattodo button
+// adds a listener to the whattodo button.
 todoButton.addEventListener("click", displayActivity);
 
-// create a new Date object
+// creates a new Date object
 var d = new Date();
 
-// call the displayDate() function
+// calls the displayDate() function.
 displayDate();
 
 function displayDate() {
@@ -20,7 +20,7 @@ function displayActivity() {
     // Gets the current day of the week from the d variable.
     var dayOfWeek = d.getDay();
 
-    // Sets a variable, called youShould, to hold the string that will contain the message for each day.
+    // Sets a variable, called youShould, to hold the string that contains the message for each day.
     var youShould;
 
     // The condition part of the switch statement that will evaluate the value of the dayOfWeek variable.
@@ -28,10 +28,45 @@ function displayActivity() {
     	// The first case for the value 0, or Sunday.
     	case 0:
     	// Sets the value of youShould when it's Sunday.
-    	youShould = "Take it easy. You've earned it!";
+    		youShould = "Take it easy. You've earned it!";
     	// The break statement to end the switch statement when the case is true.
-    	break;
+    		break;
+
+    	case 1:
+    	// Sets the value of youShould when it's Monday.
+    		youShould = "Do Cardio";
+    		break;
+
+    	case 2:
+    	// Sets the value of youShould when it's Tuesday.
+    		youShould = "Do Strength Training";
+    		break;
+
+    	case 3:
+    	// Sets the value of youShould when it's Wednesday.
+    		youShould = "Do Kickboxing";
+    		break;
+
+    	case 4:
+    	// Sets the value of youShould when it's Thursday.
+    		youShould = "Do Yoga";
+    		break;
+
+    	case 5:
+    	// Sets the value of youShould when it's Friday.
+    		youShould = "Do the Treadmill";
+    		break;
+
+    	case 6:
+    	// Sets the value of youShould when it's Saturday.
+    		youShould = "Do Fitness Walk Outside";
+    		break;
+
+    	default:
+    		youShould = "Hmm. Something has gone wrong.";
+    		break;
     }
     
-    // todo: output the value of youShould into the thingToDo div
+    // Outputs the value of youShould into the thingToDo div.
+    document.getElementById("thingToDo").innerHTML = youShould;
 }
