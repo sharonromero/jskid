@@ -13,7 +13,7 @@ var answers = [];
 
 // Listens for clicks on the submit button and call the getAnswer() function when they happen
 // Clicks and getAnswer are the two arguments that are passed, clicks is the event that's being listened for and getAnswer is the function that will be called when the event happens.
-submit.addEventListenter("clicks",getAnswer);
+submit.addEventListener("clicks",getAnswer);
 
 // Calls the function to ask the first question
 askQuestion(0);
@@ -36,12 +36,16 @@ function askQuestion(questionNumber) {
 			question.innerHTML = "Risk it, or go home.";
 			break;
 		default:
-			break;			
+			break;
 	}
 }
 
-/* getAnswer() gets the answer from the text field and pushes it into the answers array, then calls the continueStory function*/
+// getAnswer() gets the answer from the text field and pushes it into the answers array, then calls the continueStory function.
 function getAnswer() {
+	cleanInput = yourAnswer.value.toUpperCase(); // Gets the value from the input field and converts it to uppercase letters.
+	answer.push(cleanInput); // Uses the push array method to add the user's answer as a new element at the end of the answers array.
+	yourAnswer.value = ""; // Resets the input field, clearing the current value out of it.
+	continueStory(answers.length - 1); // Calls the continueStory() function, passing it the number of the last element in the answers array.
 }
 
 /* continueStory() displays part of the story or an error based on the value of an item in the answers array */
