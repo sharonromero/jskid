@@ -11,14 +11,27 @@ var d = new Date();
 displayDate();
 
 function displayDate() {
-    // todo: display the current date in the todaysdate div
+    // Sets the innerHTML property of the div element referenced by the todayDate variable to the value of d (which was created as a Date object).
+    // Displays the current date in the todaysdate div.
+    todayDate.innerHTML = d.toDateString();
 }
 
 function displayActivity() {
-    // todo: find out the day of the week.
+    // Gets the current day of the week from the d variable.
+    var dayOfWeek = d.getDay();
 
-    /* todo: set a variable, called youShould, with a different
-       string based on what day of the week it is. */
+    // Sets a variable, called youShould, to hold the string that will contain the message for each day.
+    var youShould;
+
+    // The condition part of the switch statement that will evaluate the value of the dayOfWeek variable.
+    switch (dayOfWeek) {
+    	// The first case for the value 0, or Sunday.
+    	case 0:
+    	// Sets the value of youShould when it's Sunday.
+    	youShould = "Take it easy. You've earned it!";
+    	// The break statement to end the switch statement when the case is true.
+    	break;
+    }
     
     // todo: output the value of youShould into the thingToDo div
 }
