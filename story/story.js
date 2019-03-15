@@ -13,7 +13,7 @@ var answers = [];
 
 // Listens for clicks on the submit button and call the getAnswer() function when they happen
 // Clicks and getAnswer are the two arguments that are passed, clicks is the event that's being listened for and getAnswer is the function that will be called when the event happens.
-submit.addEventListener("clicks",getAnswer);
+submit.addEventListener("click",getAnswer);
 
 // Calls the function to ask the first question
 askQuestion(0);
