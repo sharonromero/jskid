@@ -55,64 +55,66 @@ function continueStory(answerNumber) {
 	switch (answerNumber) {
 		// Says that if the user responded to the first question, run the if statement
 		case 0:
-		// Says if the first element in the array (which corresponds to the first question) is set to "YES", run the following statments.
-		if (answers[0] === "YES") {
-			// Gets the HTML from inside the div element with an ID of answer01 and overwrites the contents of the div with the ID of story.
-			// When you answer "Yes" to the question "Are you ready to begin the story?", the first part of the story will display.
-			story.innerHTML = document.getElementById("answer01").innerHTML;
-			// calls the askQuestion() function and tells it to ask question #1. This causes the askQuestion function to ask "Go to Mars, or stay home?".
-			askQuestion(1);
+			// Says if the first element in the array (which corresponds to the first question) is set to "YES", run the following statments.
+			if (answers[0] === "YES") {
+				// Gets the HTML from inside the div element with an ID of answer01 and overwrites the contents of the div with the ID of story.
+				// When you answer "Yes" to the question "Are you ready to begin the story?", the first part of the story will display.
+				story.innerHTML = document.getElementById("answer01").innerHTML;
+				// calls the askQuestion() function and tells it to ask question #1. This causes the askQuestion function to ask "Go to Mars, or stay home?".
+				askQuestion(1);
 			// If the user didn't answer "Yes", the else clause will run.
 			// Another if statement is put inside of the else clause so we can test for a value of "NO", but only if the answer wasn't "YES". 
-		} else if (answers[0] === "NO") {
+			} else if (answers[0] === "NO") {
 
-			// If the answer is "NO", the story div's innerHTML is set equal to the appropriate message.
-			story.innerHTML = document.getElementById("answer02").innerHTML;
-			// Since the user said they aren't ready to begin the story yet, ask them the first question again until they are ready.
-			askQuestion(0);
-		// Says to do the following if the user didn't enter Yes or No.	
-		} else {
+				// If the answer is "NO", the story div's innerHTML is set equal to the appropriate message.
+				story.innerHTML = document.getElementById("answer02").innerHTML;
+				// Since the user said they aren't ready to begin the story yet, ask them the first question again until they are ready.
+				askQuestion(0);
+			// Says to do the following if the user didn't enter Yes or No.	
+			} else {
 
-			// Sets the value of the story div to an error message, telling them to enter either Yes or No.
-			story.innerHTML = document.getElementById("err0").innerHTML;
-			// Asks the first question again.
-			askQuestion(0);
-		} 
-		break;
-
+				// Sets the value of the story div to an error message, telling them to enter either Yes or No.
+				story.innerHTML = document.getElementById("err0").innerHTML;
+				// Asks the first question again.
+				askQuestion(0);
+			} 
+				break;	
 		case 1:
-		if (answers[1] === "GO TO MARS") {
-			story.innerHTML = document.getElementById("answer11").innerHTML;
-			askQuestion(2);
-		} else if (answers[1] === "STAY HOME") {
-			story.innerHTML = document.getElementById("answer12").innerHTML;
-			theEnd();
-		} else {
-			story.innerHTML = document.getElementById("err1").innerHTML;
-			askQuestion(1);
-		}	
-		  break;
-		
+			if (answers[1] === "GO TO MARS") {
+				story.innerHTML = document.getElementById("answer11").innerHTML;
+				askQuestion(2);
+			} else if (answers[1] === "STAY HOME") {
+				story.innerHTML = document.getElementById("answer12").innerHTML;
+				theEnd();
+			} else {
+				story.innerHTML = document.getElementById("err1").innerHTML;
+				askQuestion(1);
+			}	
+		  		break;
 		case 2:
-		if (answers[2] === "RISK IT") {
-			story.innerHTML = document.getElementById("answer21").innerHTML;
-		theEnd();
-		} else if (answers[2] === "GO HOME") {
-			story.innerHTML = document.getElementById("answer22").innerHTML;
-		theEnd();
-		} else {
-			story.innerHTML = document.getElementById("err1").innerHTML;
-			askQuestion(2);
-		}	
-		break;
-		default:
-			story.innerHTML = "The story is over!";
-		break;
-
+			if (answers[2] === "RISK IT") {
+				story.innerHTML = document.getElementById("answer21").innerHTML;
+				theEnd();
+			} else if (answers[2] === "GO HOME") {
+				story.innerHTML = document.getElementById("answer22").innerHTML;
+				theEnd();
+			} else {
+				story.innerHTML = document.getElementById("err2").innerHTML;
+				askQuestion(2);
+			}	
+				break;
+			default:
+				story.innerHTML = "The story is over!";
+				break;
 	}
 
 }
 
-/* theEnd() ends the story and hides the input field */
+// theEnd() shows the final line of the story and hides the contents of the answer div - including the question as well as the input field and button.
 function theEnd() {
+	story.innerHTML += "<p>The End.</p>"; // Prints out "The End" after the last text in the story div.
+	// Erases the last question asked from the question div.
+	question.innerHTML = "";
+	// Hides the input field and button.
+	answer.style.display = "none";
 }
