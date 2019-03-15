@@ -1,6 +1,6 @@
 var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-var weather = ["Sunny", "Partly Sunny", "Cloudy", "Foggy", "Snowing", "Hailing", "Thunderstorms", "Sleet", "Partly Coudy", "Rainy"];
+var weather = ["Sunny", "Partly Sunny", "Cloudy", "Foggy", "Snowing", "Hailing", "Thunderstorms", "Sleet", "Partly Cloudy", "Rainy"];
 
 // minTemp and maxTemp variables that hold the minimum and maximum temperatures that the random weather program will output.
 minTemp = 0;
@@ -16,7 +16,7 @@ function generateWeather() {
 		// tempToday variable gets a random temperature between the values of the minTemp and maxTemp variables.
 		var tempToday = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
 		// Uses innerHTML to output the values of weatherToday and tempToday inside the div element.
-		document.getElementById("5DayWeather").innerHTML += "<div id='" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b> " + weatherToday + " and " + tempToday + " degrees.</div>";
+		document.getElementById("5DayWeather").innerHTML += "<div id='" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + tempToday + " degrees.</div>";
 		}
 	}
 
