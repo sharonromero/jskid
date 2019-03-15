@@ -79,11 +79,34 @@ function continueStory(answerNumber) {
 			askQuestion(0);
 		} 
 		break;
+
 		case 1:
-		break;
+		if (answers[1] === "GO TO MARS") {
+			story.innerHTML = document.getElementById("answer11").innerHTML;
+			askQuestion(2);
+		} else if (answers[1] === "STAY HOME") {
+			story.innerHTML = document.getElementById("answer12").innerHTML;
+			theEnd();
+		} else {
+			story.innerHTML = document.getElementById("err1").innerHTML;
+			askQuestion(1);
+		}	
+		  break;
+		
 		case 2:
+		if (answers[2] === "RISK IT") {
+			story.innerHTML = document.getElementById("answer21").innerHTML;
+		theEnd();
+		} else if (answers[2] === "GO HOME") {
+			story.innerHTML = document.getElementById("answer22").innerHTML;
+		theEnd();
+		} else {
+			story.innerHTML = document.getElementById("err1").innerHTML;
+			askQuestion(2);
+		}	
 		break;
 		default:
+			story.innerHTML = "The story is over!";
 		break;
 
 	}
