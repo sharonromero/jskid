@@ -13,10 +13,11 @@ buys specified number of sandwiches per day at current prices
 */
 function buyLunches() {
     // Makes a call to the resetForm() function and initializes a variable for tracking the current day
-    restForm();
+    resetForm();
     var day = 0;
     // Creates a loop that will buy sandwiches until you're out of money.
     while (money > 0) {
+        day++;
         // Gets the current price of sandwiches by making a call to the getSandwichPrice() function and assigning the return value to a variable
         var priceToday = getSandwichPrice();
         // Gets the number of sandwiches that the user entered into the form field
