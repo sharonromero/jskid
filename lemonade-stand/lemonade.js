@@ -12,6 +12,9 @@ var lemonadeCost = .25;
 // Array for storing daily temps
 var dailyTemp = [];
 
+//Listens for order
+document.getElementById("OpenTheStand").addEventListener("click",openTheStand);
+
 // Calls the function when the program loads
 generateWeather();
 
@@ -68,4 +71,22 @@ function openTheStand() {
 // Resets the game so that a new order can be placed.
 function resetForm() {
 	document.getElementById("result").innerHTML = "";
+}
+
+// displayResults() function calculates weekly results using arguments supplied to it by the openTheStand() function and outputs a report about how you did
+// Has three parameters: weeklyInventory, glassPrice, and weeklySales.
+function displayResults(weeklyInventory, glassPrice, weeklySales) {
+	// Calculates your total revenue by multiplying the total number of glasses sold times the price that was paid for each glass.
+	var revenue = weeklySales * glassPrice;
+	// Calculates your expenses by multiplying the number of glasses of lemonade you made times the cost (to you) of each glass.
+	var expense = weeklyInventory * lemonadeCost;
+	// Calculates how many glasses are left over by subtracting the total sales from the number of glasses you made.
+	var leftOver = weeklyInventory - weeklySales;
+	// Calculates your profit by subtracting expenses from the total revenue.
+	var profit = revenue - expense;
+	// Prints out the weekly report.
+	document.getElementById("result").innerHTML += "<p>You sold a total of " + weeklySales + " glasses of lemonade this week.</p>";
+	document.getElementById("result").innerHTML += "<p>Total revenue: $" + revenue + ".</p>";
+	document.getElementById("result").innerHTML += "<p>You have " + leftOver + " glasses of lemonade left over.</p>";
+	document.getElementById("result").innerHTML += "<p> Each glass costs you $" + lemonadeCost + ". Your profit was $" + profit + ".";
 }
